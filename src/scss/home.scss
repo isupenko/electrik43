@@ -1,0 +1,330 @@
+//================================================= main-slider =============================================
+
+.main-slider {
+
+   &__container {
+   }
+
+   &__body {
+      padding-top: rem(140);
+      position: relative;
+      z-index: 2;
+      @media (max-width: $tablet){
+         padding-top: rem(80);
+      }
+      @media (max-width: $mobile){
+         padding-top: rem(60);
+      }
+      @media (min-width: $tablet){
+         display: flex;
+      }
+   }
+
+   &__content {
+      align-self: flex-start;
+      flex: 0 0 percent(424, 1240);
+      @include adaptiveValue("margin-bottom", 80, 15);
+      @media (max-width: $tablet){
+         margin: 0 rem(-15);
+      }
+   }
+
+   &__slider {
+      flex: 1 1 auto;
+      min-width: 0;
+      align-self: flex-end;
+      
+      @media (max-width: $tablet){
+         margin: 0 rem(-15);
+      }
+   }
+
+   &__wrapper {
+      overflow: visible;
+      @media (min-width: $tablet){
+         @include adaptiveValue("width", 934, 290);
+      }
+   }
+
+   &__slide {
+
+   }
+}
+.content-main {
+   background-color: rgba(255, 255, 255, 0.72);
+   position: relative;
+   z-index: 3;
+   padding-left: rem(15);
+   padding-right: rem(15);
+   @include adaptiveValue("padding-top", 40, 15);
+   @include adaptiveValue("padding-bottom", 50, 15);
+   @media (min-width: $tablet){
+      background-color: rgba(255, 255, 255, 0.9);
+      @include adaptiveValue("padding", 60, 1);
+   }
+
+   &__title {
+      @include adaptiveValue("font-size", 46, 24);
+      font-weight: 700;
+      line-height: 120%;
+   }
+
+   &__text {
+      @include adaptiveValue("font-size", 22 , 16);
+      line-height: 120%;
+      padding-top: rem(25);
+   }
+
+   &__btn {
+      margin-top: rem(25);
+      width: 100%;
+   }
+}
+.slider-main {
+   display: flex;
+   flex-direction: column;
+   align-items: flex-end;
+   @media (max-width: $tablet){
+      flex-direction: column-reverse;
+   }
+
+   &__controls {
+      margin-bottom: rem(20);
+      align-self: stretch;
+      @media (min-width: $tablet){
+         padding-left: rem(20);
+      }
+      @media (max-width: $tablet){
+         padding-top: rem(20);
+      }
+   }
+}
+
+.swiper-slide {
+   position: relative;
+
+   &__img {
+      padding: 0 0 61% 0;
+   }
+
+   &__content {
+      min-width: rem(295);
+      max-width: rem(300);
+      overflow: auto;
+      color: inherit;
+      display: flex;
+      flex-direction: column;
+      padding: rem(15);
+      background:rgba(255, 255, 255, 0.9);
+      @media (min-width: $mobile){
+         position: absolute;
+         min-width: rem(350);
+         @include adaptiveValue("right", 40, 0);
+         @include adaptiveValue("bottom", 40, 0);
+      }
+      @media (max-width: $mobile) {
+         max-width: 100%;
+      }
+   }
+
+   &__title {
+      @include adaptiveValue("font-size", 28, 22);
+      font-weight: 600;
+      line-height: 120%;
+   }
+
+   &__text {
+      line-height: 150%;
+      color: $grayColor;
+   }
+
+   &__price {
+      display: flex;
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: 600;
+      font-size: rem(20);
+      &::before {
+         margin-right: rem(10);
+         font-size: rem(12);
+      }
+   }
+
+}
+.controls-slider {
+   display: flex;
+   align-items: center;
+
+   &__dotts {
+      flex: 1 1 auto;
+      @media (max-width: $tablet){
+         justify-content: center;
+      }
+      
+   }
+
+   &__arrows {
+      @media (max-width: $tablet){
+         display: none;
+      }
+   }
+}
+//============================================ /main-slider ==============================================
+
+//============================================ advantage ==============================================
+
+.advantage {
+   padding: rem(80) 0;
+
+   &__container {
+      // display: flex;
+      // flex-wrap: wrap;
+      justify-content: space-around;
+      display: grid;
+      grid-template-columns: auto auto;
+      gap: 10px;
+      position: relative;
+      &::after {
+         content: "";
+         position: absolute;
+         background: rgba(244,164,33, 0.9);
+         width: 1px;
+         height: rem(280);
+         top: -30px;
+         right: 50%;
+         @media (max-width: $mobile){
+            display: none;
+         }
+      }
+      @media (max-width: $mobile){
+         grid-template-columns: auto;
+      }
+   }
+
+   &__item {
+      display: flex;
+      padding: rem(15);
+      margin: rem(10);
+      //box-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.4);
+      border-top: 1px solid $liteGrayColor;
+      border-bottom: 1px solid $liteGrayColor;
+      border-radius: rem(10);
+      width: rem(330);
+      justify-content:center;
+   }
+
+   &__icon {
+      text-align: center;
+      align-items: center;
+
+   }
+
+   &__img {
+      width: rem(60);
+   }
+
+   &__title {
+      font-size: rem(20);
+      padding-left: rem(20);
+      line-height: 150%;
+      font-weight: 700;
+
+   }
+
+}
+//============================================ /advantage ==============================================
+
+//============================================ price ==============================================
+.price {
+
+   &__container {
+   }
+
+   &__header {
+      padding-bottom: rem(40);
+   }
+
+   &__body {
+   }
+
+   &__arrow {
+      display: flex;
+      flex-direction: row-reverse;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      @include adaptiveValue("font-size", 26, 20);
+      font-weight: 700;
+      //box-shadow: 0 0 rem(5) rgba(0, 0, 0, 0.4);
+      border-radius: rem(5);
+      border-top: 1px solid $liteGrayColor;
+      border-bottom: 1px solid $liteGrayColor;
+      padding: rem(10) rem(25);
+      transition: all 0.3s ease 0s;
+      &:not(:last-child) {
+         margin-bottom: rem(10);
+      }
+      @media (any-hover: hover){
+         &:hover{
+            // color: $orangeColor;
+            // box-shadow: 0 0 rem(5) rgba(233, 161, 6, 0.615);
+            transform: translateY(-3px,)
+         }
+      }
+      ._spoller-init & {
+         display: flex;
+         width: 100%;
+         justify-content:space-between;
+         align-items:center;
+         flex-direction: row-reverse;
+         @extend ._icon-arrow-down;
+         &::before {
+            @extend %ic;
+            font-size: rem(14);
+            transition: transform 0.3s ease 0s;
+         }
+      }
+      &._spoller-active {
+         &::before {
+            transform: rotate(-180deg);
+         }
+      }
+   }
+
+   &__list {
+      padding-bottom: rem(30);
+   }
+
+   &__item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      @include adaptiveValue("font-size", 18, 14);
+      font-weight: 600;
+      padding: rem(10);
+      border-bottom: 1px solid $liteGrayColor;
+   }
+
+   &__title {
+   }
+
+   &__value {
+      padding-left: rem(30);
+   }
+
+   &__all {
+      //display: block;
+      margin: rem(20);
+      color: $orangeColor;
+      transition: color 0.3s ease 0s;
+      @media (any-hover: hover){
+         &:hover{
+            color: #eb7515;
+         }
+      }
+   }
+}
+//============================================ /price ==============================================
+
+//====================================================================================================
