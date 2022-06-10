@@ -68,7 +68,29 @@ body {
 	flex: 1 1 auto;
    &__main-slider {
    }
+
+	&__security {
+      margin-top: rem(120);
+		@include adaptiveValue("margin-bottom", 60, 30);
+		@media (max-width: $tablet){
+			margin-top: rem(80);
+		}
+		@media (max-width: $mobile){
+			margin-top: rem(60);
+		}
+   }
+	&__room {
+		margin-top: rem(120);
+		@include adaptiveValue("margin-bottom", 60, 30);
+		@media (max-width: $tablet){
+			margin-top: rem(80);
+		}
+		@media (max-width: $mobile){
+			margin-top: rem(60);
+		}
+   }
 }
+
 // Оболочка ============================================================================================================================================================================================================================================================================================================================================================================================================================================
 .wrapper {
 	min-height: 100%;
@@ -144,3 +166,6 @@ body {
 
 // Подключение стилей отдельных страниц
 @import "home";
+@import "security";
+@import "room";
+

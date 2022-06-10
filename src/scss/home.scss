@@ -239,6 +239,7 @@
 .price {
 
    &__container {
+      margin-bottom: rem(80);
    }
 
    &__header {
@@ -262,6 +263,10 @@
       border-bottom: 1px solid $liteGrayColor;
       padding: rem(10) rem(25);
       transition: all 0.3s ease 0s;
+      &_red {
+         border-top: 1px solid #f20a0a;
+         border-bottom: 1px solid #f20a0a;
+      }
       &:not(:last-child) {
          margin-bottom: rem(10);
       }

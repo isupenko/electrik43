@@ -7,10 +7,24 @@
 }
 
 .title-h2 {
-	@include adaptiveValue("font-size", 40, 24);
+	@include adaptiveValue("font-size", 40, 30);
 	font-weight: 700;
 	line-height: 120%;
 	text-align: center;
+}
+
+.title-h1 {
+	@include adaptiveValue("font-size", 50, 30);
+	font-weight: 700;
+	line-height: 120%;
+	//text-align: center;
+}
+
+.title-h3 {
+	@include adaptiveValue("font-size", 30, 20);
+	font-weight: 700;
+	line-height: 120%;
+	//text-align: center;
 }
 
 .slider-arrows {

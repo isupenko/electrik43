@@ -1,0 +1,26 @@
+
+.room {
+
+   &__container {
+   }
+
+   &__title {
+      padding: rem(30) 0 rem(10) 0;
+   }
+
+   &__body {
+      @include adaptiveValue("font-size", 20, 14);
+      line-height: 150%;
+   }
+
+   &__item {
+      margin: 0 0 rem(10) rem(30);
+      list-style-type: disc;
+   }
+
+   &__text {
+      padding-bottom: rem(15);
+   }
+}
+
+

@@ -2,6 +2,11 @@
 //====================================================================================================
 
 .footer {
+   background-image: url(img/bg.jpg);
+   background-repeat: no-repeat;
+   background-position: center bottom;
+   //background-size: cover;
+   padding-bottom: 40px;
 
    &__container {
    }
@@ -12,7 +17,7 @@
       grid-template-columns: rem(290) 1fr;
       justify-content: space-between;
       margin-bottom: rem(20);
-      @include adaptiveValue("padding-top", 60, 30);
+      padding-top: rem(30);
       @include adaptiveValue("column-gap", 60, 0);
       @media (max-width: $tablet){
          grid-template-rows: auto auto;
