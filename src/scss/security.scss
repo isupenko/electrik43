@@ -2,7 +2,15 @@
 .security {
 
    &__container {
+
    }
+
+   &__content {
+
+
+   }
+
+
 
    &__title {
       padding: rem(30) 0;
@@ -11,8 +19,6 @@
    &__list {
       @include adaptiveValue("font-size", 20, 14);
       line-height: 150%;
-      
-
    }
 
    &__item {

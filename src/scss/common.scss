@@ -140,6 +140,20 @@
 	}
 }
 
+.btn-more {
+	font-size: rem(16);
+	color: $orangeColor;
+	font-weight: 700;
+	text-decoration: underline;
+	padding: rem(5);
+	transition: color 0.3s ease 0s;
+	@media (any-hover: hover){
+		&:hover{
+			color: #ff7707;
+		}
+	}
+}
+
 ._flyImage.-ibg {
 	opacity: 1;
 	position: fixed;

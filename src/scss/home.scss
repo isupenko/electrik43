@@ -23,7 +23,7 @@
    &__content {
       align-self: flex-start;
       flex: 0 0 percent(424, 1240);
-      @include adaptiveValue("margin-bottom", 80, 15);
+      @include adaptiveValue("margin-bottom", 40, 15);
       @media (max-width: $tablet){
          margin: 0 rem(-15);
       }
@@ -59,20 +59,22 @@
    @include adaptiveValue("padding-top", 40, 15);
    @include adaptiveValue("padding-bottom", 50, 15);
    @media (min-width: $tablet){
+      box-shadow: 0 0 10px rgba(0,0,0,0.5);
       background-color: rgba(255, 255, 255, 0.9);
-      @include adaptiveValue("padding", 60, 1);
+      @include adaptiveValue("padding", 40, 1);
    }
 
    &__title {
-      @include adaptiveValue("font-size", 46, 24);
+      @include adaptiveValue("font-size", 42, 24);
       font-weight: 700;
-      line-height: 120%;
+      line-height: 110%;
    }
 
    &__text {
-      @include adaptiveValue("font-size", 22 , 16);
+      @include adaptiveValue("font-size", 20 , 16);
       line-height: 120%;
       padding-top: rem(25);
+      font-weight: 600;
    }
 
    &__btn {
@@ -239,7 +241,6 @@
 .price {
 
    &__container {
-      margin-bottom: rem(80);
    }
 
    &__header {
@@ -252,6 +253,7 @@
    &__arrow {
       display: flex;
       flex-direction: row-reverse;
+      text-align: left;
       width: 100%;
       justify-content: space-between;
       align-items: center;
@@ -295,6 +297,10 @@
             transform: rotate(-180deg);
          }
       }
+   }
+
+   .price-arrow-title {
+      padding-right: rem(20);
    }
 
    &__list {

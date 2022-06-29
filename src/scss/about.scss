@@ -1,0 +1,31 @@
+.about {
+
+   &__container {
+      margin-bottom: rem(30);
+   }
+
+   &__title {
+      padding: rem(30) 0;
+   }
+
+   &__content {
+   }
+
+   &__txt {
+      @include adaptiveValue("font-size", 20, 14);
+      line-height: 150%;
+   }
+
+   &__list {
+      @include adaptiveValue("font-size", 20, 14);
+      line-height: 150%;
+      padding-bottom: rem(15);
+   }
+
+   &__item {
+      margin-left: rem(30);
+      padding-bottom: rem(5);
+      list-style-type: disc;
+   }
+}
+
