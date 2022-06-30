@@ -14,6 +14,7 @@
    &__txt {
       @include adaptiveValue("font-size", 20, 14);
       line-height: 150%;
+      padding-bottom: rem(15);
    }
 
    &__list {
@@ -26,6 +27,15 @@
       margin-left: rem(30);
       padding-bottom: rem(5);
       list-style-type: disc;
+   }
+
+   a {
+      color: $orangeColor;
+      @media (any-hover: hover){
+         &:hover{
+            text-decoration: underline;
+         }
+      }
    }
 }
 
