@@ -205,15 +205,14 @@
    }
 
    &__item {
-      display: flex;
+      display: grid;
+      grid-template: auto auto / 85px 1fr;
       padding: rem(15);
       margin: rem(10);
-      //box-shadow: 0 0 rem(10) rgba(0, 0, 0, 0.4);
       border-top: 1px solid $liteGrayColor;
       border-bottom: 1px solid $liteGrayColor;
       border-radius: rem(10);
       width: rem(330);
-      justify-content:center;
    }
 
    &__icon {
@@ -227,6 +226,7 @@
    }
 
    &__title {
+      align-items: right;
       font-size: rem(20);
       padding-left: rem(20);
       line-height: 150%;
